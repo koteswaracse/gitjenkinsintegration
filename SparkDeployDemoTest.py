@@ -5,6 +5,7 @@ from pyspark.sql import functions as psf
 spark = SparkSession.builder.appName("SparkJob").master("local[*]").getOrCreate()
 sc = spark.sparkContext
 
+
 landingSchema = StructType([StructField('SALE_ID', StringType(), True),\
                             StructField('PRODUCT_ID', StringType(), True),\
                             StructField('QUANTITY_SOLD', IntegerType(), True),\
